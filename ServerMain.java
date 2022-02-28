@@ -1,9 +1,6 @@
 package TradingGame;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -29,7 +26,6 @@ public class ServerMain {
 				Thread provider = new PriceProvider(socket, ge, b); // 사용자 매수&매도신호 받는 중
 				provider.start();
 			}
-			
 		} catch (IOException e) {
 		}
 	}
